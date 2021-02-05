@@ -4,9 +4,7 @@ import Planet from "./components/Planet";
 import Sun from "./components/Sun";
 import "./Universe.scss";
 
-interface Props {}
-
-export default function Universe({}: Props): ReactElement {
+export default function Universe(): ReactElement {
   const [modal, setModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [newPlanet, setNewPlanet] = useState({
