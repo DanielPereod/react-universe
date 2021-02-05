@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+
+.modal__create-planet-modal {
+  background-color: rgba(255, 255, 255, 0.949);
+  border-radius: 10px;
+  height: 50vh;
+  width: 80vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40vw, -25vh);
+  transform-origin: top left;
+  animation: modalAnimation;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  .modal__new-planet__inputs {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #0000001c;
+    .modal__range {
+      span {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Inconsolata", monospace;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+    }
+    .modal__colors {
+      display: flex;
+      height: 2rem;
+      input {
+        appearance: none;
+        border: none;
+        flex: 1;
+        height: 100%;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    button {
+      margin-top: 10px;
+      background-color: #0000009f;
+      border-radius: 10px;
+      border: none;
+      font-size: 2rem;
+      outline: none;
+      width: 100%;
+      padding: 10px;
+      &:hover {
+        background-color: #000000ad;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes modalAnimation {
+  0% {
+    top: 0;
+    left: 0;
+    width: 1px;
+    transform: translate(0, 0) scale(0);
+    border-radius: 200px 100px 300px 400px/ 200px 100px 300px 400px;
+  }
+  50% {
+    border-radius: 400px 300px 200px 600px/ 200px 300px 400px 100px;
+  }
+
+  75% {
+    border-radius: 30px 200px 10px 40px/ 10px 30px 20px 10px;
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-40vw, -25vh);
+    border-radius: 10px;
+  }
+}
