@@ -1,9 +1,4 @@
-import React, {
-  ReactElement,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react";
+import React, { ReactElement, useLayoutEffect, useState } from "react";
 import "./Planet.scss";
 import PlanetTexture from "./PlanetTexture";
 

@@ -1,25 +1,11 @@
-import React, {
-  ReactElement,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react";
+import React, { ReactElement, useLayoutEffect, useState } from "react";
 import Modal from "./components/Modal";
 import Planet from "./components/Planet";
-import PlanetTexture from "./components/PlanetTexture";
 import Sun from "./components/Sun";
 import "./Universe.scss";
 
 interface Props {}
 
-interface PlanetProps {
-  size: number;
-  speed: number;
-  radius: number;
-  color1?: string;
-  color2?: string;
-  dimension: "2d" | "3d";
-}
 export default function Universe({}: Props): ReactElement {
   const [modal, setModal] = useState(false);
   const [loading, setLoading] = useState(false);
